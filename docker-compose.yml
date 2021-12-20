@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  server:
+    image: roman9us/server
+    ports:
+      - "8080:8080"
+
+  client:
+    image: roman9us/client
+    depends_on:
+      - server
